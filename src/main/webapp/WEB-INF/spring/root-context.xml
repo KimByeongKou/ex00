@@ -20,6 +20,7 @@
 	<property name="password" value="zerock"></property>
 </bean>	 -->
 
+
 <bean id="dataSource" 
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       
@@ -39,8 +40,16 @@
       class="org.mybatis.spring.SqlSessionFactoryBean">
       
  	<property name="dataSource" ref="dataSource" />
+ 	
+ 	<!-- 
+ 		mybatis 설정 파일과의 연동을 위한 설정.
+ 	 -->
 	<property name="configLocation" 
 				value="classpath:/mybatis-config.xml"></property>
+				
+	<!-- 
+		매핑 파일을 위한 경로 설정.
+	 -->
 	<property name="mapperLocations" 
 	      value="classpath:mappers/**/*Mapper.xml"></property>			
 </bean>
@@ -55,6 +64,7 @@
 </bean>
     	
 
+<!--  해당 패키지를 스킨하여 빈을 생성한다. -->
 <context:component-scan base-package="org.zerock.persistence">
 </context:component-scan>
 		

@@ -13,6 +13,10 @@ public class SampleController3 {
 	private static final Logger logger = 
 			LoggerFactory.getLogger(SampleController3.class);
 	
+	
+	/*
+	 * Model객체를 사용할 경우 객체 전달이 가능하다.
+	 */
 	@RequestMapping("/doD")
 	public String doD(Model model){
 		

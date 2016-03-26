@@ -29,6 +29,10 @@ public class SampleControllerTest {
 
     private MockMvc mockMvc;
     
+    
+    /*
+     * WAS 없이 컨트롤러를 테스트해볼 수 있다.
+     */
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
@@ -37,7 +41,7 @@ public class SampleControllerTest {
     
     @Test
     public void testDoA() throws Exception{
-    	mockMvc.perform(MockMvcRequestBuilders.get("/doA"));
+    	mockMvc.perform(MockMvcRequestBuilders.get("/doE"));
     }
 
 }

@@ -8,6 +8,12 @@
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
+	
+	<!-- 1.8버젼 자바, 4.1.7 버젼의 스프링으로 바꾸는 설정. -->
+		<!-- 
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
+		-->
 		<java-version>1.8</java-version>
 		<org.springframework-version>4.1.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
@@ -97,6 +103,11 @@
 			<version>1</version>
 		</dependency>
 				
+				
+				<!--
+					서블릿 버전을 높여야 한다.
+				 -->
+				 
 <!-- Servlet before-->
 <!-- <dependency>
 	<groupId>javax.servlet</groupId>
@@ -125,6 +136,10 @@
 			<version>1.2</version>
 		</dependency>
 	
+	
+	<!-- 
+		자세한 로깅을 하기 위해 junit버젼을 높여주는 설정.
+	 -->
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -134,41 +149,54 @@
 		</dependency>  
 		
 	    
+	    <!-- mybatis와 spring을 연동하기 위한 의존성. -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-					    
+				
+		<!-- mybatis 사용을 위한 의존 -->	    
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.2.8</version>
 		</dependency>
 				
+		<!-- spring-jdbc 설정을 위한 의존. -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>	
 				
+		<!-- spring-test 를 위한 의존. -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>		
 		
-<dependency>
-	<groupId>com.fasterxml.jackson.core</groupId>
-	<artifactId>jackson-databind</artifactId>
-	<version>2.5.4</version>
-</dependency>
-
-<dependency>
-  <groupId>org.bgee.log4jdbc-log4j2</groupId>
-  <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
-  <version>1.16</version>
-</dependency>
+		
+		<!-- json 데이터 형태로 변환을 위한 의존. -->				
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.4</version>
+		</dependency>
+		
+		
+		<!-- 좀 더 자세한 로깅을 위함.
+			추가적으로
+			log4jdbc.log4j2.properties,
+			logback.xml 
+			을 추가 해줘야 한다.
+		 -->
+		<dependency>
+		  <groupId>org.bgee.log4jdbc-log4j2</groupId>
+		  <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+		  <version>1.16</version>
+		</dependency>
 		
 				      
 	</dependencies>

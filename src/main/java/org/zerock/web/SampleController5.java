@@ -8,6 +8,11 @@ import org.zerock.domain.ProductVO;
 @Controller
 public class SampleController5 {
 
+	
+	/*
+	 * 리턴형에 @ResponseBody를 사용하면
+	 * 리턴하려는 객체를 JSON 형태로 리턴할 수 있다.
+	 */
 	@RequestMapping("/doJSON")
 	public @ResponseBody ProductVO doJSON(){
 		

@@ -12,6 +12,11 @@ public class SampleController2 {
 	private static final Logger logger = 
 			LoggerFactory.getLogger(SampleController2.class);
 
+	
+	/*
+	 * String 형으로 리턴하면 
+	 * 해당 string.jsp로 forward하게 된다..
+	 */
 	@RequestMapping("doC")
 	public String doC( @ModelAttribute("msg") String msg){
 		
