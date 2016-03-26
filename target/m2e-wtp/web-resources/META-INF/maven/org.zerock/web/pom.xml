@@ -9,6 +9,8 @@
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 	
+	<!--  hello this is window -->
+	
 	<!-- 1.8버젼 자바, 4.1.7 버젼의 스프링으로 바꾸는 설정. -->
 		<!-- 
 		<java-version>1.6</java-version>
